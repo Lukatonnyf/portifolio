@@ -1,0 +1,345 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #121212;
+  color: #b6b5b5;
+
+  & .navbar {
+    z-index: 2;
+    margin-top: 0px;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #2f156b;
+
+    & .menu > button {
+      font-size: 25px;
+      border: none;
+      color: #f9f9f9;
+      background-color: transparent;
+    }
+
+    & .lightmode {
+      width: 50px;
+      height: 20px;
+      border-radius: 32px;
+      background-color: #212121;
+    }
+
+    & #powerbutton {
+      display: none;
+    }
+
+    & .toggle {
+      width: 20px;
+      height: 20px;
+      display: block;
+      cursor: pointer;
+      position: relative;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background-color: #ac8ff2;
+      border: 1px solid #2f156b;
+      border-radius: 32px;
+      box-sizing: border-box;
+      transition: 0.3s cubic-bezier(0.895, 0.07, 0.685, 0.68);
+    }
+
+    & #powerbutton:checked + .toggle {
+      left: 30px;
+      background: #2f156b;
+    }
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 105vh 70vh 105vh 60vh;
+    grid-template-areas:
+      "h h"
+      "m m"
+      "a a"
+      "f f";
+  }
+
+  header {
+    border-bottom: 1px solid #2f156b;
+    grid-area: h;
+    margin: 150px 50px 50px 50px;
+    display: flex;
+    flex-direction: column;
+
+    & .maintext {
+      margin-top: 20px;
+    }
+
+    & .headercontainer {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    & img {
+      padding: 20px;
+      height: 70%;
+      background: linear-gradient(#212121, #121212);
+      border: 1px solid #82828255;
+      border-radius: 95px;
+      transition: all ease 0.55s;
+    }
+
+    & img:hover {
+      padding: 25px;
+      transform: translateY(10px);
+    }
+
+    & h1 {
+      margin: 0px 0px 2px 0px;
+      color: #f9f9f9;
+      font-size: 30px;
+    }
+
+    & h2 {
+      margin: 0px 0px 2px 0px;
+      font-size: 25px;
+      color: #2f156b;
+    }
+
+    & h3 {
+      margin: 0px 0px 2px 0px;
+      font-size: 15px;
+      color: #828282;
+    }
+
+    & .box {
+      margin-top: 30px;
+    }
+
+    & button {
+      border-radius: 25px;
+      border: 1px solid #2f156b;
+      padding: 10px;
+      color: #ffff;
+      transition: all ease 1s;
+    }
+
+    & .btn-curriculovirtual {
+      background: linear-gradient(
+        90deg,
+        rgba(62, 9, 187, 0.8),
+        rgba(88, 5, 167, 0.648)
+      );
+      margin-right: 5px;
+    }
+
+    & .btn-contato {
+      margin-left: 5px;
+      background: #121212;
+    }
+
+    & button:hover {
+      padding: 15px;
+      transform: translateY(5px);
+    }
+
+    & .sobremim {
+      text-align: center;
+      margin: auto;
+    }
+
+    & .sobremim p {
+      font-size: 1rem;
+      color: #828282;
+    }
+  }
+
+  main {
+    grid-area: m;
+
+    & .container {
+      text-align: center;
+    }
+
+    & .habilitcards {
+      margin-top: 150px;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    & .cards {
+      height: 120px;
+      width: 120px;
+      border-radius: 35px 0px 0px;
+      border-bottom: 5px solid #4f18cf;
+      background: #212121;
+      transition: all ease-out 1s;
+    }
+
+    & .cards:hover {
+      transform: translateY(10px);
+      box-shadow: 2px 1px 252px #4e0ee5d7;
+    }
+
+    & .cards p {
+      color: #6222f7;
+      font-size: 20px;
+    }
+
+    & .cards ion-icon {
+      font-size: 40px;
+      color: #6222f7;
+    }
+  }
+
+  .habilitcards {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 1s;
+  }
+
+  .show {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0);
+    transition: all 1s;
+  }
+
+  aside {
+    grid-area: a;
+
+    & .aside {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 20vh 20vh 20vh 20vh;
+      grid-template-areas:
+        "hp hp"
+        "myp myp"
+        "myp2 myp2"
+        "myp3 myp3";
+    }
+
+    & .everyprojects {
+      margin-top: 0px;
+      opacity: 0;
+      filter: blur(15px);
+      transform: translateY(50%);
+    }
+
+    & .everyprojects h1 {
+      text-align: center;
+      padding: 50px;
+      font-size: 25px;
+    }
+
+    & .visible {
+      opacity: 1;
+      filter: blur(0px);
+      transform: translateY(0);
+      transition: all 1s;
+    }
+
+    & .headerprojects {
+      grid-area: hp;
+      text-align: center;
+      padding: 50px;
+    }
+
+    & .myprojects {
+      grid-area: myp;
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0vh 40px 50vh;
+    }
+
+    & .myprojects img {
+      width: 50%;
+    }
+
+    & .myprojects2 {
+      grid-area: myp;
+      display: flex;
+      justify-content: space-around;
+      margin: 40px 50vh 20px 0px;
+    }
+
+    & .myprojects2 img {
+      width: 50%;
+    }
+
+    & .myprojects3 {
+      grid-area: myp;
+      display: flex;
+      justify-content: space-around;
+      margin: 40px 30vh 20px 30vh;
+    }
+
+    & .myprojects3 img {
+      width: 50%;
+    }
+
+    & .btn-project {
+      border: 1px solid #4f18cf;
+      border-radius: 25px;
+      background: #212121;
+      color: #ffff;
+      padding: 6px;
+      transition: all ease-in-out 0.55s;
+    }
+
+    & .btn-project:hover {
+      transform: translateY(5px) translateX(3px);
+      padding: 7px;
+    }
+  }
+
+  footer {
+    margin-top: 50vh;
+    box-shadow: 3px 3px 35px #2f156b;
+    border-top: 1px solid #2f156b;
+    grid-area: f;
+    text-align: center;
+    align-items: center;
+
+    & .contatoicons {
+      font-size: 20px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    & a {
+      margin: 0px;
+      color: #ac8ff2;
+      text-decoration: none;
+    }
+
+    & h2,
+    h3,
+    p {
+      margin: 10px;
+    }
+
+    & p {
+      font-size: 17px;
+    }
+  }
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  background: #2f156b;
+}

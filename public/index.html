@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="menu">
+        <button><ion-icon name="menu-outline"></ion-icon></button>
+      </div>
+
+      <div class="titlepage">
+        <h1>Portifólio</h1>
+      </div>
+
+      <div class="lightmode">
+        <input type="checkbox" id="powerbutton" />
+        <label onclick="lightmode()" for="powerbutton" class="toggle"></label>
+      </div>
+    </div>
+
+    <section>
+      <header>
+        <div class="headercontainer">
+          <div class="maintext">
+            <h1>Olá, eu sou o</h1>
+            <h2>Lukatonny</h2>
+            <h3>Desenvolvedor Front-end</h3>
+
+            <div class="box">
+              <button class="btn-curriculovirtual">Download CV</button>
+              <button class="btn-contato">Entrar em Contato</button>
+            </div>
+          </div>
+
+          <div class="imagempessoal">
+            <img src="../assets/images/img-dev-formal.png" alt="" />
+          </div>
+        </div>
+
+        <div class="sobremim">
+          <h1>SOBRE MIM</h1>
+          <p>
+            Desenvolvedor Front-end sem experiência no mercado de trabalho,
+            <br />
+            sou um Desenvolvedor iniciante com experiência em html e css, e
+            <br />
+            atualmente estudando JavaScript, porém tenho interesse em aprender
+            <br />
+            outras linguagems, gosto de desafios e trabalho em equipe.
+            <br />
+          </p>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="container">
+          <h2 class="habilitcards">Habilidades</h2>
+
+          <div class="habilitcards">
+            <div class="cards">
+              <p>HTML5</p>
+              <ion-icon name="logo-html5"></ion-icon>
+            </div>
+            <div class="cards">
+              <p>CSS3</p>
+              <ion-icon name="logo-css3"></ion-icon>
+            </div>
+            <div class="cards">
+              <p>JavaScript</p>
+              <ion-icon name="logo-javascript"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <aside class="aside">
+        <div class="projects">
+          <div class="everyprojects">
+            <div class="everyprojects">
+              <h1>Meus Projetos</h1>
+            </div>
+
+            <div class="myprojects">
+              <div>
+                <h2>Honor Projects</h2>
+                <p>
+                  Página de uma Loja de barbearia, Feita e inspirada em <br />
+                  um projeto do Yotube, um dos meus Primeiros projetos onde usei
+                  <br />
+                  <b>JavaScript</b> de forma interativa.
+                </p>
+                <button
+                  id="btnsite"
+                  class="btn-project"
+                  onclick="irprojecthonor()"
+                >
+                  Ir para Projeto
+                </button>
+              </div>
+              <img
+                src="../assets/images/projects/honorproject.PNG"
+                alt=""
+                class="imgproject"
+              />
+            </div>
+
+            <div class="myprojects2">
+              <div>
+                <h2>Fitogel Project</h2>
+                <p>
+                  Landing page de venda produzida para prática <br />
+                  e teste de conhecimento em
+                  <b
+                    >HTML, CSS e JavaScript. Esse <br />
+                    é um dos poucos projetos onde eu fiz sem algum tipo de
+                    "tutorial".
+                  </b>
+                </p>
+                <button id="btnsite" class="btn-project" onclick="irproject()">
+                  Ir para Projeto
+                </button>
+              </div>
+              <img src="../assets/images/projects/markuppage.PNG" alt="" />
+            </div>
+
+            <div class="myprojects3">
+              <div>
+                <h2>Pepsi Project</h2>
+                <p>
+                  Projeto inspirado e feito para ser um site <br />
+                  comercial da marca pepsi, este projeto está com alguns <br />
+                  problemas na parte do JavaScript, porém logo será arrumado.
+                  <br />
+                </p>
+                <button
+                  id="btnsite"
+                  class="btn-project"
+                  onclick="irprojecthonor()"
+                >
+                  Ir para Projeto
+                </button>
+              </div>
+              <img src="../assets/images/projects/pepsiproject.PNG" alt="" />
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <footer>
+        <h1>Contatos</h1>
+
+        <div class="contatoicons">
+          <div class="contactcards">
+            <a href="#" target="_blank">
+              <h2><ion-icon name="mail-outline"></ion-icon></h2>
+              <h3>E-mail</h3>
+              <p>Lukatonnyferreiras@gmail.com</p>
+            </a>
+          </div>
+
+          <div class="contactcards" target="_blank">
+            <a href="#" target="_blank">
+              <h2><ion-icon name="call-outline"></ion-icon></h2>
+              <h3>Telefone</h3>
+              <p>(13) 99762-5164</p>
+            </a>
+          </div>
+
+          <div class="contactcards" target="_blank">
+            <a href="#" target="_blank">
+              <h2><ion-icon name="logo-linkedin"></ion-icon></h2>
+              <h3>Linkedin</h3>
+              <p>@Lukatonny ferreira</p>
+            </a>
+          </div>
+
+          <div class="contactcards" target="_blank">
+            <a href="#" target="_blank">
+              <h2><ion-icon name="logo-github"></ion-icon></h2>
+              <h3>Github</h3>
+              <p>@lukatonnyf</p>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <script src="../assets/script.js"></script>
+  </body>
+</html>
