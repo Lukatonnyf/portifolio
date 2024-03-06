@@ -56,5 +56,18 @@ const btnIrparaoSite = document.getElementById('btnsite')
 
 
 function irprojecthonor(btnIrparaoSite) {
-    window.location.href = ""
+    window.location.href = "https://honorsmartwatch.surge.sh/"
+}
+
+const btnPepsiSite = document.getElementById('btnsitepepsi')
+
+
+function irProjectPepsi(btnPepsiSite) {
+    window.location.href = "https://honorsmartwatch.surge.sh/"
+}
+
+const btnMarkuppageSite = document.getElementById('btnsitemarkuppage')
+
+function irProjectMarkuppage() {
+    window.location.href = "https://honorsmartwatch.surge.sh/"
 }
