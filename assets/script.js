@@ -1,13 +1,15 @@
-// const anoAtual = new Date();
-// const meuAniversario = new Date("2007-09-16");
-// const birth_date = new Date("2007-09-16").toISOString();
+
 
 
 // const btn = document.querySelector('.toggle');
 // const body = document.body;
 
 // btn.addEventListener('click', () => {
-//     document.body.style.background = "#a9a9a9"
+//     if (document.body.style.background === '') {
+//         document.body.style.background = "#a9a9a9"
+//     } else {
+//         document.body.style.background = "#212121"
+//     }
 // })
 
 
@@ -59,6 +61,12 @@ function irprojecthonor(btnIrparaoSite) {
     window.location.href = "https://honorsmartwatch.surge.sh/"
 }
 
+const btnMarkuppageSite = document.getElementById('btnsitemarkuppage')
+
+function irProjectMarkuppage() {
+    window.location.href = "https://markuppage.surge.sh/"
+}
+
 const btnPepsiSite = document.getElementById('btnsitepepsi')
 
 
@@ -66,8 +74,3 @@ function irProjectPepsi(btnPepsiSite) {
     window.location.href = "https://honorsmartwatch.surge.sh/"
 }
 
-const btnMarkuppageSite = document.getElementById('btnsitemarkuppage')
-
-function irProjectMarkuppage() {
-    window.location.href = "https://honorsmartwatch.surge.sh/"
-}
