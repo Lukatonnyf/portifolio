@@ -1,25 +1,24 @@
 
 
 
-// const btn = document.querySelector('.toggle');
-// const body = document.body;
+const btn = document.querySelector('.toggle');
+const body = document.body;
+body.style.background = 'rgb(18, 18, 18)'
 
-// btn.addEventListener('click', () => {
-//     if (document.body.style.background === '') {
-//         document.body.style.background = "#a9a9a9"
-//     } else {
-//         document.body.style.background = "#212121"
-//     }
-// })
+
 
 
 function lightmode() {
-    if (document.body.style.background === ``) {
-        document.body.style.background = 'green'
-    } else {
-        document.body.style.background = "#12112"
+    if (body.style.background === 'rgb(18, 18, 18)') {
+        document.body.style.background = "#a9a9a9"
+        document.body.style.color = "#000"
+    }
+    else {
+        document.body.style.background = "#121212"
+        document.body.style.color = "#a9a9a9"
     }
 }
+
 
 
 const myObserver = new IntersectionObserver((animationhabilits) => {
